@@ -149,7 +149,6 @@ class MainWindow(wx.Frame):
     def create_other_stuff(self):
         self.log = logging.getLogger('window')
         self.emulator = emulator.Emulator(convert_by_line=True)
-        self.pil_image = PIL.Image.open('diploma.png')
         image_data = bytes([0]*160*72 + [1]*160*72 + [2]*160*72 + [3]*160*72)
         self.pil_image = PIL.Image.frombytes('P',(160,144*2), image_data)
         self.clear_status_timer = wx.Timer(self)
