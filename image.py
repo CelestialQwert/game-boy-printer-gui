@@ -216,7 +216,7 @@ def twobit_to_image(arr, palette='gray', save=False):
         image.putpalette(palette_convert(PALETTES[palette]))
         
     if save:
-        self.pil_image.save(time.strftime('gbp_out/gbp_%Y%m%d_%H%M%S.png'),'PNG')
+        image.save(time.strftime('gbp_out/gbp_%Y%m%d_%H%M%S.png'),'PNG')
     return image
 
 def gbtile_to_twobit(gbtile_bytes):
